@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ig-to-channel-bot
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false         # set in Render Dashboard
+      - key: WEBHOOK_SECRET_PATH
+        sync: false         # set in Render Dashboard (e.g., igbot-12345)
+# WEBHOOK_URL is optional on Render; we use RENDER_EXTERNAL_URL automatically
